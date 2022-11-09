@@ -1,0 +1,30 @@
+<form method="post" [formGroup]="cardForm" (ngSubmit)="onSubmit()"  class="w-full max-w-lg">
+    <div class="w-full flex flex-col mb-4">
+        <label for="name" class="mb-2 block">
+            CARDHOLDER NAME
+        </label>
+        <input type="text" id="name" class="block border" formControlName="name">
+    </div>
+
+    <div class="w-full flex flex-col mb-4">
+        <label for="card_number" class="mb-2 block">
+            Card Number
+        </label>
+        <input  type="text" formControlName="number" id="name" class="block border ">
+    </div>
+
+    <div class="flex flex-row justify-between gap-4 mb-4">
+        <div class="flex flex-col">
+            <label for="" class="text-green-800">EXP. DATE (MM/YY)</label>
+            <div class="flex flex-row gap-4">
+                <input type="text"  class="border w-12 rounded text-center" placeholder="MM" formControlName="expiryMonth">
+                <input type="text" class="border w-12 rounded text-center" placeholder="YY" formControlName="expiryYear">
+            </div>
+        </div>
+        <div class="flex flex-col">
+            <label for="">CVC</label>
+            <input type="text" formControlName="cvc" class="border rounded w-24" placeholder="e.g. 123">
+        </div>
+    </div>
+    <button  type="button" class="bg-black text-white py-2 rounded w-full center hover:bg-blue-600">Confirm</button>
+</form>
